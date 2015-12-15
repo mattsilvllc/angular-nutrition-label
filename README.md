@@ -1,7 +1,7 @@
 # angular-nutrition-label
 
 Installation
-============
+------------
 
 ```sh
 bower i angular-nutrition-label
@@ -12,6 +12,9 @@ and add dependency to your app
 ```js
 angular.module('app', ['nutritionix.nutrition-label']);
 ```
+
+Usage
+-----
 
 Directive proxies settings directly to the [original nutritionLabel library](https://github.com/Yurko-Fedoriv/nutrition-label).
 
