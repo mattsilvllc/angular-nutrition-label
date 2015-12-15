@@ -1,0 +1,32 @@
+{
+  "name": "angular-nutrition-label",
+  "version": "1.0.0",
+  "description": "angular directive for embedding nutritionix nutrition label into angular apps",
+  "main": "angular-nutrition-label.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattsilvllc/angular-nutrition-label.git"
+  },
+  "keywords": [
+    "nutritionix",
+    "angular",
+    "nutrition",
+    "label"
+  ],
+  "author": "Yurko Fedoriv <yfedoriv@nutritionix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattsilvllc/angular-nutrition-label/issues"
+  },
+  "homepage": "https://github.com/mattsilvllc/angular-nutrition-label#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-strip-ng-log": "^1.1.2",
+    "gulp-uglify": "^1.5.1"
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Nutritionix Nutrition Label Demo</title>
+
+  <link rel="stylesheet" type="text/css" href="./bower_components/nutrition-label/nutritionLabel.css"/>
+
+  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="./bower_components/nutrition-label/nutritionLabel.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="./angular-nutrition-label.js"></script>
+</head>
+<body ng-controller="index">
+<h1>Nutrition Label Demo</h1>
+
+<div nutrition-label="vm.labelData"
+     nutrition-label-options="{showDisclaimer: true}"
+     width="300"
+></div>
+
+<script type="text/javascript">
+  angular.module('app', ['nutritionix.nutrition-label'])
+      .controller('index', function ($scope) {
+        var vm = $scope.vm = this;
+
+        vm.labelData = {
+          allowFDARounding: true,
+          brandName: "Nutritionix",
+          decimalPlacesForQuantityTextbox: 2,
+          itemName: "cheeseburger",
+          scrollLongItemNamePixel: 38,
+          showAmountPerServing: true,
+          showCalcium: true,
+          showCalories: true,
+          showCholesterol: true,
+          showFatCalories: true,
+          showFibers: true,
+          showIngredients: false,
+          showIron: true,
+          showMonoFat: false,
+          showPolyFat: false,
+          showProteins: true,
+          showSatFat: true,
+          showServingSize: true,
+          showServingUnitQuantity: true,
+          showServingsPerContainer: false,
+          showSodium: true,
+          showSugars: true,
+          showTotalCarb: true,
+          showTotalFat: true,
+          showTransFat: true,
+          showVitaminA: true,
+          showVitaminC: true,
+          valueCalcium: 20.748,
+          valueCalories: 564.2,
+          valueCholesterol: 92.82,
+          valueFatCalories: 261.5886,
+          valueFibers: 3.094,
+          valueIron: 25.985555555555553,
+          valueProteins: 31.4678,
+          valueSatFat: 12.50886,
+          valueServingSizeUnit: "sandwich",
+          valueServingUnitQuantity: 1,
+          valueServingWeightGrams: 182,
+          valueSodium: 875.42,
+          valueSugars: 8.4994,
+          valueTotalCarb: 43.8074,
+          valueTotalFat: 29.0654,
+          valueTransFat: 1.13932,
+          valueVitaminA: 10.01,
+          valueVitaminC: 0
+        };
+      });
+</script>
+</body>
+</html>
