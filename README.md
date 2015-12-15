@@ -2,9 +2,16 @@
 
 Installation
 ------------
+Install via bower
 
 ```sh
 bower i angular-nutrition-label
+```
+
+include lib into your index.html
+
+```html
+<script type="text/javascript" src="./bower_components/angular-nutrition-label.min.js"></script>
 ```
 
 and add dependency to your app
