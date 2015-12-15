@@ -10,7 +10,12 @@ bower i angular-nutrition-label
 
 include lib into your index.html
 
+*Note: it is jQuery dependant*
+
 ```html
+<script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="./bower_components/nutrition-label/nutritionLabel.js"></script>
+<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="./bower_components/angular-nutrition-label.min.js"></script>
 ```
 
