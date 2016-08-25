@@ -39,6 +39,16 @@
 
               $log.debug('Final options:', options);
 
+              if (options.applyMathRounding) {
+                angular.forEach(options, function (value, key) {
+                  if (key === 'valueServingSizeUnit' || key === 'valueServingUnitQuantity') { return; }
+
+                  if (key.indexOf('value') === 0) {
+                    options[key] = Math.round(value);
+                  }
+                })
+              }
+
               label.nutritionLabel(options);
             }
           }

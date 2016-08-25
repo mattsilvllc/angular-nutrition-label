@@ -15,7 +15,7 @@
 <h1>Nutrition Label Demo</h1>
 
 <div nutrition-label="vm.labelData"
-     nutrition-label-options="{showDisclaimer: true}"
+     nutrition-label-options="{showDisclaimer: true, applyMathRounding: true}"
      width="300"
 ></div>
 
@@ -25,7 +25,7 @@
         var vm = $scope.vm = this;
 
         vm.labelData = {
-          allowFDARounding: true,
+          allowFDARounding: false,
           brandName: "Nutritionix",
           decimalPlacesForQuantityTextbox: 2,
           itemName: "cheeseburger",
