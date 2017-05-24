@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <title>Angular Nutritionix Nutrition Label Demo</title>
 
-  <link rel="stylesheet" type="text/css" href="./bower_components/nutrition-label/nutritionLabel.css"/>
+  <link rel="stylesheet" type="text/css"
+        href="./bower_components/nutrition-label-jquery-plugin/dist/css/nutritionLabel-min.css"/>
 
   <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="./bower_components/nutrition-label/nutritionLabel.js"></script>
+  <script type="text/javascript"
+          src="./bower_components/nutrition-label-jquery-plugin/dist/js/nutritionLabel-min.js"></script>
   <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="./angular-nutrition-label.js"></script>
 </head>
@@ -69,7 +71,10 @@
           valueTotalFat: 29.0654,
           valueTransFat: 1.13932,
           valueVitaminA: 10.01,
-          valueVitaminC: 0
+          valueVitaminC: 0,
+          userFunctionOnQuantityChange: function (description, previousValue, currentValue) {
+            console.log('quantity changed:', description, previousValue, currentValue);
+          }
         };
       });
 </script>
