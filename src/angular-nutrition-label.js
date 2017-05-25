@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.0
+ * @version 2.0.1
  */
 
 (function () {
@@ -81,7 +81,9 @@
             );
 
             angular.forEach(options, (value, key) => {
-              if (key.indexOf('userFunction') === -1 && angular.isFunction(value)) {
+              if (key[0] === '$') {
+                delete options[key];
+              } else if (key.indexOf('userFunction') === -1 && angular.isFunction(value)) {
                 options[key] = value();
               }
             });
