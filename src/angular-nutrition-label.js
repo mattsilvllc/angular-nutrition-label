@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.1
+ * @version 2.0.2
  */
 
 (function () {
@@ -178,7 +178,7 @@
         }
       };
     })
-    .filter('trackFoodToLabelData', function ($log) {
+    .filter('trackFoodToLabelData', function ($log, nutritionLabelGlobalOptions) {
       function nutrient(fullNutrients, attrId) {
         attrId = attrId.toString();
         for (let i = 0; i < fullNutrients.length; i += 1) {
@@ -267,7 +267,7 @@
 
         angular.extend(labelData, attributes);
         angular.forEach(defaults, (value, key) => {
-          if (angular.isUndefined(labelData[key])) {
+          if (angular.isUndefined(labelData[key]) && angular.isUndefined(nutritionLabelGlobalOptions[key])) {
             labelData[key] = value;
           }
         });
