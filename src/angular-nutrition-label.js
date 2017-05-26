@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.2
+ * @version 2.0.3
  */
 
 (function () {
@@ -137,7 +137,6 @@
                   'valueCholesterol',
                   'valueSodium',
                   'valuePotassium',
-                  'valuePotassium_2018',
                   'valueTotalCarb',
                   'valueFibers',
                   'valueSugars',

@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.2
+ * @version 2.0.3
  */
 
 (function () {
@@ -107,7 +107,7 @@
             }
 
             if (options.applyMathRounding) {
-              ['valueServingWeightGrams', 'valueServingPerContainer', 'valueCalories', 'valueFatCalories', 'valueTotalFat', 'valueSatFat', 'valueTransFat', 'valuePolyFat', 'valueMonoFat', 'valueCholesterol', 'valueSodium', 'valuePotassium', 'valuePotassium_2018', 'valueTotalCarb', 'valueFibers', 'valueSugars', 'valueAddedSugars', 'valueProteins', 'valueVitaminA', 'valueVitaminC', 'valueVitaminD', 'valueCalcium', 'valueIron'].forEach(function (attribute) {
+              ['valueServingWeightGrams', 'valueServingPerContainer', 'valueCalories', 'valueFatCalories', 'valueTotalFat', 'valueSatFat', 'valueTransFat', 'valuePolyFat', 'valueMonoFat', 'valueCholesterol', 'valueSodium', 'valuePotassium', 'valueTotalCarb', 'valueFibers', 'valueSugars', 'valueAddedSugars', 'valueProteins', 'valueVitaminA', 'valueVitaminC', 'valueVitaminD', 'valueCalcium', 'valueIron'].forEach(function (attribute) {
                 if (!angular.isUndefined(options[attribute])) {
                   options[attribute] = round(options[attribute]);
                 }
