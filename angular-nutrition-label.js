@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.3
+ * @version 2.0.4
  */
 
 (function () {
@@ -90,20 +90,6 @@
                 handler.apply(options, arguments);
                 scope.$apply();
               };
-            }
-
-            if (options.userFunctionOnQuantityChange && angular.isUndefined(jQuery.fn.nutritionLabel.defaultSettings.userFunctionOnQuantityChange)) {
-              // support for version where userFunctionOnQuantityChange is not yet supported
-              // this hack works because how the below code is written
-              // https://github.com/nutritionix/nutrition-label/blob/v7.0.4/dist/js/nutritionLabel.js#L682-L683
-
-              // this makes `typeof window[$localSettings.userFunctionNameOnQuantityChange] === 'function'` = true
-              options.userFunctionOnQuantityChange.toString = function () {
-                return 'toString';
-              };
-
-              // this is then passed to eval, which does nothing with callable and returns it unchanged
-              options.userFunctionNameOnQuantityChange = options.userFunctionOnQuantityChange;
             }
 
             if (options.applyMathRounding) {
