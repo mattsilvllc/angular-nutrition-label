@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.5
+ * @version 2.0.6
  */
 
 (function () {
@@ -45,7 +45,7 @@
 
     return {
       restrict: 'A',
-      template: '\n        <div>\n          <div class="label-container"></div>\n          <div class="label-mode-switch" ng-if="!options.hideModeSwitcher">\n            FDA Label Style:\n            <label class="radio-inline">\n              <input type="radio" name="labelMode" ng-value="false" ng-model="vm.showLegacyVersion"> 2018 Version\n            </label>\n            <label class="radio-inline">\n              <input type="radio" name="labelMode" ng-value="true" ng-model="vm.showLegacyVersion"> Legacy Version\n            </label>\n          </div>\n        </div>\n      ',
+      template: '\n        <div>\n          <div class="label-container"></div>\n          <div class="label-mode-switch" ng-if="!settings.hideModeSwitcher">\n            FDA Label Style:\n            <label class="radio-inline">\n              <input type="radio" name="labelMode" ng-value="false" ng-model="vm.showLegacyVersion"> 2018 Version\n            </label>\n            <label class="radio-inline">\n              <input type="radio" name="labelMode" ng-value="true" ng-model="vm.showLegacyVersion"> Legacy Version\n            </label>\n          </div>\n        </div>\n      ',
       scope: {
         item: '=nutritionLabel',
         options: '=?nutritionLabelOptions',
@@ -102,7 +102,7 @@
 
             $log.debug('nutritionLabel: Final options:', options);
 
-            scope.options = options;
+            scope.settings = options;
 
             label.nutritionLabel(options);
           }

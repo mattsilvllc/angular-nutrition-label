@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.5
+ * @version 2.0.6
  */
 
 (function () {
@@ -47,7 +47,7 @@
         template: `
         <div>
           <div class="label-container"></div>
-          <div class="label-mode-switch" ng-if="!options.hideModeSwitcher">
+          <div class="label-mode-switch" ng-if="!settings.hideModeSwitcher">
             FDA Label Style:
             <label class="radio-inline">
               <input type="radio" name="labelMode" ng-value="false" ng-model="vm.showLegacyVersion"> 2018 Version
@@ -143,7 +143,7 @@
 
               $log.debug('nutritionLabel: Final options:', options);
 
-              scope.options = options;
+              scope.settings = options;
 
               label.nutritionLabel(options);
             }
