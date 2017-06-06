@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.6
+ * @version 2.0.7
  */
 
 (function () {
@@ -141,9 +141,9 @@
       brandName: 'Nutritionix',
       allowFDARounding: false,
       applyMathRounding: true,
-
       valueServingUnitQuantity: 1,
-      valueServingSizeUnit: 'Serving'
+      valueServingSizeUnit: 'Serving',
+      showIngredients: false
     };
 
     var map = [{ labelAttribute: 'valueCalories', attrId: 208 }, { labelAttribute: 'valueFatCalories', attrId: 204, adapter: function adapter(v) {

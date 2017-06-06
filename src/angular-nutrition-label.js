@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.6
+ * @version 2.0.7
  */
 
 (function () {
@@ -179,13 +179,13 @@
       }
 
       const defaults = {
-        itemName:          'Item',
-        brandName:         'Nutritionix',
-        allowFDARounding:  false,
-        applyMathRounding: true,
-
+        itemName:                 'Item',
+        brandName:                'Nutritionix',
+        allowFDARounding:         false,
+        applyMathRounding:        true,
         valueServingUnitQuantity: 1,
-        valueServingSizeUnit:     'Serving'
+        valueServingSizeUnit:     'Serving',
+        showIngredients:          false
       };
 
       const map = [
