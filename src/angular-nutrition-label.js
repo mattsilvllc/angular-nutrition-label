@@ -3,14 +3,14 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.0.7
+ * @version 2.1.0
  */
 
 (function () {
   'use strict';
 
   angular.module('nutritionix.nutrition-label', [])
-    .constant('nutritionLabelGlobalOptions', {})
+    .constant('nutritionLabelGlobalOptions', {overrides: {}})
     /**
      * @ngdoc directive
      * @name nutritionix.nutrition-label.directive:nutritionLabel
@@ -77,6 +77,7 @@
               attributes,
               scope.options || {},
               scope.item,
+              nutritionLabelGlobalOptions.overrides,
               scope.vm || {}
             );
 
