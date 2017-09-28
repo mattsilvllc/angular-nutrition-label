@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.1.0
+ * @version 2.1.1
  */
 
 (function () {
@@ -195,8 +195,8 @@
         {labelAttribute: 'valueTotalFat', attrId: 204},
         {labelAttribute: 'valueSatFat', attrId: 606},
         {labelAttribute: 'valueTransFat', attrId: 605},
-        {labelAttribute: 'valuePolyFat', attrId: 645},
-        {labelAttribute: 'valueMonoFat', attrId: 646},
+        {labelAttribute: 'valueMonoFat', attrId: 645},
+        {labelAttribute: 'valuePolyFat', attrId: 646},
         {labelAttribute: 'valueCholesterol', attrId: 601},
         {labelAttribute: 'valueSodium', attrId: 307},
         {labelAttribute: 'valuePotassium', attrId: 306},
