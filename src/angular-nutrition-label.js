@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.1.1
+ * @version 2.1.2
  */
 
 (function () {
@@ -209,7 +209,7 @@
         {labelAttribute: 'valueVitaminA', attrId: 318, dailyValue: 5000},
         {labelAttribute: 'valueVitaminC', attrId: 401, dailyValue: 60},
         {labelAttribute: 'valueVitaminD', attrId: 324, dailyValue: 400},
-        {labelAttribute: 'valueCalcium', attrId: 324, dailyValue: 1000},
+        {labelAttribute: 'valueCalcium', attrId: 301, dailyValue: 1000},
         {labelAttribute: 'valueIron', attrId: 303, dailyValue: 18},
       ];
 

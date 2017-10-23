@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.1.1
+ * @version 2.1.2
  */
 
 (function () {
@@ -150,7 +150,7 @@
         return v * 9;
       } }, { labelAttribute: 'valueTotalFat', attrId: 204 }, { labelAttribute: 'valueSatFat', attrId: 606 }, { labelAttribute: 'valueTransFat', attrId: 605 }, { labelAttribute: 'valueMonoFat', attrId: 645 }, { labelAttribute: 'valuePolyFat', attrId: 646 }, { labelAttribute: 'valueCholesterol', attrId: 601 }, { labelAttribute: 'valueSodium', attrId: 307 }, { labelAttribute: 'valuePotassium', attrId: 306 }, { labelAttribute: 'valuePotassium_2018', attrId: 306, dailyValue: 3500 }, { labelAttribute: 'valueTotalCarb', attrId: 205 }, { labelAttribute: 'valueFibers', attrId: 291 }, { labelAttribute: 'valueSugars', attrId: 269 },
     // {labelAttribute: 'valueAddedSugars', attrId: undefined},
-    { labelAttribute: 'valueProteins', attrId: 203 }, { labelAttribute: 'valueVitaminA', attrId: 318, dailyValue: 5000 }, { labelAttribute: 'valueVitaminC', attrId: 401, dailyValue: 60 }, { labelAttribute: 'valueVitaminD', attrId: 324, dailyValue: 400 }, { labelAttribute: 'valueCalcium', attrId: 324, dailyValue: 1000 }, { labelAttribute: 'valueIron', attrId: 303, dailyValue: 18 }];
+    { labelAttribute: 'valueProteins', attrId: 203 }, { labelAttribute: 'valueVitaminA', attrId: 318, dailyValue: 5000 }, { labelAttribute: 'valueVitaminC', attrId: 401, dailyValue: 60 }, { labelAttribute: 'valueVitaminD', attrId: 324, dailyValue: 400 }, { labelAttribute: 'valueCalcium', attrId: 301, dailyValue: 1000 }, { labelAttribute: 'valueIron', attrId: 303, dailyValue: 18 }];
 
     return function (food) {
       var attributes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
