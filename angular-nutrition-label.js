@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.1.2
+ * @version 2.2.0
  */
 
 (function () {
@@ -90,6 +90,14 @@
                 handler.apply(options, arguments);
                 scope.$apply();
               };
+            }
+
+            if (options.calorieIntake && options.adjustUserDailyValues) {
+              [{ labelAttribute: 'valuePotassium_2018', dailyValue: 3500 }, { labelAttribute: 'valueVitaminA', dailyValue: 5000 }, { labelAttribute: 'valueVitaminC', dailyValue: 60 }, { labelAttribute: 'valueVitaminD', dailyValue: 400 }, { labelAttribute: 'valueCalcium', dailyValue: 1000 }].forEach(function (definition) {
+                if (options[definition.labelAttribute]) {
+                  options[definition.labelAttribute] *= 2000 / options.calorieIntake;
+                }
+              });
             }
 
             if (options.applyMathRounding) {
