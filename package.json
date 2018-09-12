@@ -1,6 +1,6 @@
 {
   "name": "angular-nutrition-label",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "angular directive for embedding nutritionix nutrition label into angular apps",
   "main": "angular-nutrition-label.js",
   "scripts": {

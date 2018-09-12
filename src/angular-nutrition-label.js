@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.2.0
+ * @version 2.3.0
  */
 
 (function () {
@@ -113,14 +113,15 @@
 
               if (options.calorieIntake && options.adjustUserDailyValues) {
                 [
-                  {labelAttribute: 'valuePotassium_2018', dailyValue: 3500},
-                  {labelAttribute: 'valueVitaminA', dailyValue: 5000},
-                  {labelAttribute: 'valueVitaminC', dailyValue: 60},
-                  {labelAttribute: 'valueVitaminD', dailyValue: 400},
-                  {labelAttribute: 'valueCalcium', dailyValue: 1000}
-                ].forEach(definition => {
-                  if (options[definition.labelAttribute]) {
-                    options[definition.labelAttribute] *= 2000 / options.calorieIntake;
+                  'valuePotassium_2018',
+                  'valueVitaminA',
+                  'valueVitaminC',
+                  'valueVitaminD',
+                  'valueCalcium',
+                  'valueIron'
+                ].forEach(labelAttribute => {
+                  if (options[labelAttribute]) {
+                    options[labelAttribute] *= 2000 / options.calorieIntake;
                   }
                 })
               }
@@ -214,7 +215,7 @@
         {labelAttribute: 'valueCholesterol', attrId: 601},
         {labelAttribute: 'valueSodium', attrId: 307},
         {labelAttribute: 'valuePotassium', attrId: 306},
-        {labelAttribute: 'valuePotassium_2018', attrId: 306, dailyValue: 3500},
+        {labelAttribute: 'valuePotassium_2018', attrId: 306, dailyValue: 4700},
         {labelAttribute: 'valueTotalCarb', attrId: 205},
         {labelAttribute: 'valueFibers', attrId: 291},
         {labelAttribute: 'valueSugars', attrId: 269},
@@ -222,8 +223,8 @@
         {labelAttribute: 'valueProteins', attrId: 203},
         {labelAttribute: 'valueVitaminA', attrId: 318, dailyValue: 5000},
         {labelAttribute: 'valueVitaminC', attrId: 401, dailyValue: 60},
-        {labelAttribute: 'valueVitaminD', attrId: 324, dailyValue: 400},
-        {labelAttribute: 'valueCalcium', attrId: 301, dailyValue: 1000},
+        {labelAttribute: 'valueVitaminD', attrId: 328, dailyValue: 20},
+        {labelAttribute: 'valueCalcium', attrId: 301, dailyValue: 1300},
         {labelAttribute: 'valueIron', attrId: 303, dailyValue: 18},
       ];
 
