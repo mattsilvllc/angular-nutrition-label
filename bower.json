@@ -1,6 +1,6 @@
 {
   "name": "angular-nutrition-label",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "homepage": "https://github.com/mattsilvllc/angular-nutrition-label",
   "authors": [
     "Yurko Fedoriv <yfedoriv@nutritionix.com>"
@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "angular": ">=1.3.0",
-    "nutrition-label-jquery-plugin": "^7.0.5",
+    "nutrition-label-jquery-plugin": "^8.0.8",
     "jquery": ">=1.11.3"
   }
 }
