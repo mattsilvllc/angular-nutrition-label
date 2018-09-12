@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.3.0
+ * @version 2.3.1
  */
 
 (function () {
@@ -255,8 +255,9 @@
               value = 100 / definition.dailyValue * value;
             }
 
-            labelData[definition.labelAttribute]                          = value;
-            labelData[definition.labelAttribute.replace('value', 'show')] = true;
+            labelData[definition.labelAttribute]                                                                  = value;
+            labelData[definition.labelAttribute.replace('value', 'show')]                                         = true;
+            labelData['daily' + definition.labelAttribute[0].toUpperCase() + definition.labelAttribute.substr(1)] = definition.dailyValue;
           } else {
             labelData[definition.labelAttribute.replace('value', 'show')] = false;
           }
