@@ -30,9 +30,9 @@ angular.module('app', ['nutritionix.nutrition-label']);
 Usage
 -----
 
-Directive proxies settings directly to the [original nutritionLabel library](https://github.com/Yurko-Fedoriv/nutrition-label).
+Directive proxies settings directly to the [original nutritionLabel library](https://github.com/nutritionix/nutrition-label).
 
-You can set any of [settings](https://github.com/nutritionix/nutrition-label/blob/master/nutritionLabel.js#L76-L366)
+You can set any of [settings](https://github.com/nutritionix/nutrition-label/blob/v9.0.9/dist/js/nutritionLabel.js#L76-L429)
 with (merged in the following direction)
 
 - [nutritionLabelGlobalOptions](https://github.com/mattsilvllc/angular-nutrition-label/blob/2.0.0/src/angular-nutrition-label.js#L13) service (just assign it properties in any place e.g. `app.run(callback)`)
@@ -49,11 +49,13 @@ you are free to put all settings into nutrition-label object.
 
 ```html
 <div nutrition-label="vm.labelData"
-     nutrition-label-options="{showDisclaimer: true}"
-     hide-mode-switcher="false" <!-- if set to true disables version switcher on the bottom -->
+     nutrition-label-options="{showDisclaimer: true, hideModeSwitcher: false}"
      width="300"
 ></div>
 ```
+
+Special option: `(bool) hideModeSwitcher` Defaults to `false`. 
+If set to true label version selector won't be shown at the bottom
 
 Usage of the custom angular filters is suggested to prepare your data structures for using with this directive.
 

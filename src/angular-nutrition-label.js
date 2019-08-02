@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.3.2
+ * @version 2.4.0
  */
 
 (function () {
@@ -61,7 +61,6 @@
         scope:    {
           item:             '=nutritionLabel',
           options:          '=?nutritionLabelOptions',
-          hideModeSwitcher: '=?'
         },
         link:     function postLink(scope, element, attributes) {
           const labelContainer = element.find('.label-container');
@@ -219,7 +218,7 @@
         {labelAttribute: 'valueTotalCarb', attrId: 205},
         {labelAttribute: 'valueFibers', attrId: 291},
         {labelAttribute: 'valueSugars', attrId: 269},
-        // {labelAttribute: 'valueAddedSugars', attrId: undefined},
+        {labelAttribute: 'valueAddedSugars', attrId: 539},
         {labelAttribute: 'valueProteins', attrId: 203},
         {labelAttribute: 'valueVitaminA', attrId: 318, dailyValue: 5000},
         {labelAttribute: 'valueVitaminC', attrId: 401, dailyValue: 60},
@@ -252,12 +251,13 @@
             }
 
             if (definition.dailyValue) {
-              value = 100 / definition.dailyValue * value;
+              value                         = 100 / definition.dailyValue * value;
+              const dailyValueProperty      = 'daily' + definition.labelAttribute[0].toUpperCase() + definition.labelAttribute.substr(1);
+              labelData[dailyValueProperty] = definition.dailyValue;
             }
 
-            labelData[definition.labelAttribute]                                                                  = value;
-            labelData[definition.labelAttribute.replace('value', 'show')]                                         = true;
-            labelData['daily' + definition.labelAttribute[0].toUpperCase() + definition.labelAttribute.substr(1)] = definition.dailyValue;
+            labelData[definition.labelAttribute]                          = value;
+            labelData[definition.labelAttribute.replace('value', 'show')] = true;
           } else {
             labelData[definition.labelAttribute.replace('value', 'show')] = false;
           }
