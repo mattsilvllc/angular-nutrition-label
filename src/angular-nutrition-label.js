@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.5.0
+ * @version 2.6.0
  */
 
 (function () {
@@ -84,7 +84,7 @@
               if (key[0] === '$') {
                 delete options[key];
               } else if (key.indexOf('userFunction') === -1 && angular.isFunction(value)) {
-                options[key] = value();
+                options[key] = value(options);
               }
             });
 
