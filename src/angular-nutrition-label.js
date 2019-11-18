@@ -3,7 +3,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.4.0
+ * @version 2.5.0
  */
 
 (function () {
@@ -225,6 +225,7 @@
         {labelAttribute: 'valueVitaminD', attrId: 328, dailyValue: 20},
         {labelAttribute: 'valueCalcium', attrId: 301, dailyValue: 1300},
         {labelAttribute: 'valueIron', attrId: 303, dailyValue: 18},
+        {labelAttribute: 'valueCaffeine', attrId: 262},
       ];
 
       return function (food, attributes = {}, externalServingQty = 1) {

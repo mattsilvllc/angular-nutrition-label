@@ -5,7 +5,7 @@
  * (c) 2017 Nutritionix, LLC. http://www.nutritionix.com
  * @license MIT
  *
- * @version 2.4.0
+ * @version 2.5.0
  */
 (function () {
   'use strict';
@@ -216,6 +216,9 @@
       labelAttribute: 'valueIron',
       attrId: 303,
       dailyValue: 18
+    }, {
+      labelAttribute: 'valueCaffeine',
+      attrId: 262
     }];
     return function (food) {
       var attributes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
